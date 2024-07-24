@@ -1,0 +1,177 @@
+header {
+  background-image: url('https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Library-Sites-canyon-shared/default/dwfe612fcc/images/plp/gravel-bikes/World-canyon-gravel-my23-01.jpg?sw=1920');
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  color: blanchedalmond;
+  font-size: 50px;
+}
+
+.introduccion p {
+  color: blanchedalmond;
+  font-size: 25px;
+}
+
+nav {
+  background-color: #deb75e;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #deb75e;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas */
+}
+
+nav ul li {
+  margin: 0.5em 1em; /* Añadir margen vertical para permitir espacio entre elementos en móvil */
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: red;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar contenido horizontalmente */
+  justify-content: space-between; /* Distribuir espacio entre elementos */
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px; /* Espacio entre la imagen y el resto del contenido */
+  max-width: 600px; /* Asegurar que las imágenes no excedan 600px de ancho */
+}
+
+.card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card p {
+  font-size: 1em;
+  margin-bottom: 15px;
+  text-align: center; /* Centrar el texto dentro de la tarjeta */
+}
+
+.card button {
+  background-color: #deb75e;
+  color: white;
+  border: none;
+  padding: 5px 10px; /* Hacer el botón más pequeño */
+  cursor: pointer;
+  align-self: center; /* Centrar el botón horizontalmente */
+  margin-top: auto; /* Asegurar que el botón esté al final de la tarjeta */
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .introduccion p {
+    font-size: 20px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 1.25em;
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+
+  .card button {
+    padding: 5px 8px; /* Hacer el botón más pequeño para móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .introduccion p {
+    font-size: 18px;
+  }
+
+  nav ul {
+    flex-direction: column; /* Cambiar la dirección del menú a columna */
+    align-items: center; /* Centrar los elementos del menú */
+  }
+
+  nav ul li {
+    margin: 0.5em 0; /* Espacio vertical entre elementos del menú */
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+
+  .card p {
+    font-size: 0.85em;
+    margin-bottom: 8px;
+  }
+
+  .card button {
+    padding: 5px 8px; /* Hacer el botón más pequeño para móviles */
+  }
+}
