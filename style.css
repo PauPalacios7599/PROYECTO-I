@@ -10,6 +10,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative; /* Fijar el header en la parte superior */
 }
 
 h1 {
@@ -24,6 +25,8 @@ h1 {
 
 nav {
   background-color: #deb75e;
+  width: 100%;
+  position: relative;
 }
 
 nav ul {
@@ -58,6 +61,7 @@ nav ul li a:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
+  margin-top: 20px;
 }
 
 .card {
@@ -90,17 +94,17 @@ nav ul li a:hover {
   text-align: center; /* Centrar el texto dentro de la tarjeta */
 }
 
-.card button {
+.card a.card-button {
   background-color: #deb75e;
   color: white;
-  border: none;
+  text-decoration: none;
   padding: 5px 10px; /* Hacer el botón más pequeño */
   cursor: pointer;
   align-self: center; /* Centrar el botón horizontalmente */
   margin-top: auto; /* Asegurar que el botón esté al final de la tarjeta */
 }
 
-.card button:hover {
+.card a.card-button:hover {
   background-color: #0056b3;
 }
 
@@ -118,6 +122,7 @@ nav ul li a:hover {
     grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     gap: 10px;
     padding: 10px;
+    margin-top: 420px; /* Ajustar el margen superior para móviles */
   }
 
   .card {
@@ -134,7 +139,7 @@ nav ul li a:hover {
     margin-bottom: 10px;
   }
 
-  .card button {
+  .card a.card-button {
     padding: 5px 8px; /* Hacer el botón más pequeño para móviles */
   }
 }
@@ -171,7 +176,7 @@ nav ul li a:hover {
     margin-bottom: 8px;
   }
 
-  .card button {
+  .card a.card-button {
     padding: 5px 8px; /* Hacer el botón más pequeño para móviles */
   }
 }
