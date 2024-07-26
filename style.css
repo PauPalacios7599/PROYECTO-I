@@ -1,7 +1,22 @@
+:root {
+  --main-bg-color: #deb75e;
+  --main-text-color: blanchedalmond;
+  --main-font-size: 50px;
+  --card-bg-color: #fff;
+  --card-border-color: #ddd;
+  --card-box-shadow: rgba(0, 0, 0, 0.1);
+  --card-font-size: 1em;
+  --button-bg-color: #deb75e;
+  --button-hover-bg-color: #0056b3;
+  --max-img-width: 600px;
+  --header-height: 350px;
+  --nav-padding: 1em;
+}
+
 header {
   background-image: url('https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Library-Sites-canyon-shared/default/dwfe612fcc/images/plp/gravel-bikes/World-canyon-gravel-my23-01.jpg?sw=1920');
   width: 100%;
-  height: 350px;
+  height: var(--header-height);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -10,21 +25,21 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative; /* Fijar el header en la parte superior */
+  position: relative;
 }
 
 h1 {
-  color: blanchedalmond;
-  font-size: 50px;
+  color: var(--main-text-color);
+  font-size: var(--main-font-size);
 }
 
 .introduccion p {
-  color: blanchedalmond;
-  font-size: 25px;
+  color: var(--main-text-color);
+  font-size: calc(var(--main-font-size) / 2);
 }
 
 nav {
-  background-color: #deb75e;
+  background-color: var(--main-bg-color);
   width: 100%;
   position: relative;
 }
@@ -33,21 +48,21 @@ nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  background-color: #deb75e;
+  background-color: var(--main-bg-color);
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas */
+  flex-wrap: wrap;
 }
 
 nav ul li {
-  margin: 0.5em 1em; /* Añadir margen vertical para permitir espacio entre elementos en móvil */
+  margin: 0.5em var(--nav-padding);
   position: relative;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
-  padding: 1em;
+  padding: var(--nav-padding);
   display: block;
 }
 
@@ -65,21 +80,22 @@ nav ul li a:hover {
 }
 
 .card {
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   padding: 20px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--card-border-color);
+  box-shadow: 0 2px 5px var(--card-box-shadow);
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrar contenido horizontalmente */
-  justify-content: space-between; /* Distribuir espacio entre elementos */
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .card img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px; /* Espacio entre la imagen y el resto del contenido */
-  max-width: 600px; /* Asegurar que las imágenes no excedan 600px de ancho */
+  margin-bottom: 10px;
 }
 
 .card h3 {
@@ -89,23 +105,23 @@ nav ul li a:hover {
 }
 
 .card p {
-  font-size: 1em;
+  font-size: var(--card-font-size);
   margin-bottom: 15px;
-  text-align: center; /* Centrar el texto dentro de la tarjeta */
+  text-align: center;
 }
 
 .card a.card-button {
-  background-color: #deb75e;
+  background-color: var(--button-bg-color);
   color: white;
   text-decoration: none;
-  padding: 5px 10px; /* Hacer el botón más pequeño */
+  padding: 5px 10px;
   cursor: pointer;
-  align-self: center; /* Centrar el botón horizontalmente */
-  margin-top: auto; /* Asegurar que el botón esté al final de la tarjeta */
+  align-self: center;
+  margin-top: auto;
 }
 
 .card a.card-button:hover {
-  background-color: #0056b3;
+  background-color: var(--button-hover-bg-color);
 }
 
 /* Media Queries para dispositivos móviles */
@@ -119,10 +135,10 @@ nav ul li a:hover {
   }
 
   .grid-container {
-    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    grid-template-columns: 1fr;
     gap: 10px;
     padding: 10px;
-    margin-top: 420px; /* Ajustar el margen superior para móviles */
+    margin-top: calc(var(--header-height) + 70px);
   }
 
   .card {
@@ -140,7 +156,7 @@ nav ul li a:hover {
   }
 
   .card a.card-button {
-    padding: 5px 8px; /* Hacer el botón más pequeño para móviles */
+    padding: 5px 8px;
   }
 }
 
@@ -154,12 +170,12 @@ nav ul li a:hover {
   }
 
   nav ul {
-    flex-direction: column; /* Cambiar la dirección del menú a columna */
-    align-items: center; /* Centrar los elementos del menú */
+    flex-direction: column;
+    align-items: center;
   }
 
   nav ul li {
-    margin: 0.5em 0; /* Espacio vertical entre elementos del menú */
+    margin: 0.5em 0;
   }
 
   .card {
@@ -177,6 +193,6 @@ nav ul li a:hover {
   }
 
   .card a.card-button {
-    padding: 5px 8px; /* Hacer el botón más pequeño para móviles */
+    padding: 5px 8px;
   }
 }
